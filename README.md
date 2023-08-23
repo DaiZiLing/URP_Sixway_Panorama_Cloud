@@ -6,6 +6,8 @@
 
 This is a new trick for create 2d cloud in Unity or other game engine.
 
+Code write on URP 12.1.7 (Unity 2021) , but shader is not complicate so you can use this shader on lower version of URP without any error, maybe.
+
 # Here we can get 4 folders insides.
 1: Model: M_Hemisphere_Inv_Normal.fbx, a hemisphere which has invere normal
 
