@@ -86,17 +86,17 @@ Shader "DZL/CloudLayer"
                 float3 SqrDir                   = LightDir * LightDir;
                 float  Transmission             = dot(SqrDir, Weights);
 
-                float Opacity = pow(RigLBtF.y, 6);
+                float Opacity = pow(RigLBtF.y, 2.2);
                 Opacity = ViewDir.y < 0 ? Opacity : 0;
                 Opacity = saturate(Opacity * 0.1 * i.posWS.y);
 
                 float3 DirectDiffuse      = exp(-1.0f * (1 - Transmission) * _Density) * mainLight.color;
-                float3 RimEnhance         = min(pow(RigRTBk.z, 8), pow(Transmission, 8)) * HGPhase * mainLight.color * 3;
+                float3 RimEnhance         = min(1, pow(Transmission, 6)) * HGPhase * mainLight.color * 10;
 
                        DirectDiffuse     += RimEnhance;
                        DirectDiffuse.rgb  = MixFog(DirectDiffuse.rgb, 0.5);
 
-                    //    DirectDiffuse = RimEnhance2;
+                    //    DirectDiffuse = 1;
                     DirectDiffuse = ViewDir.y < 0 ? DirectDiffuse : 0;
                 
                 return float4(DirectDiffuse, Opacity);
