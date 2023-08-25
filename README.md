@@ -19,4 +19,6 @@ Code write on URP 12.1.7 (Unity 2021) , but shader is not complicate so you can 
 
 5: BlenderFile: a scene which ease to use for render six-way cloud
 
-## much appreciate for vfx guru on Twitter, @Samuel Krug and @byccollective sharing thier remarquable experience on cloud rendering !
+------------------------------------------------------------------------
+
+much appreciate for vfx guru on Twitter, @Samuel Krug and @byccollective sharing thier remarquable experience on cloud rendering !
